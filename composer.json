@@ -45,16 +45,8 @@
     },
     "require-dev": {
     },
-    "conflict": {
-            "drupal/drupal": "*"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
     "extra": {
         "patches": {
         },
@@ -81,19 +73,12 @@
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
         "drupal-scaffold": {
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
             "locations": {
                 "web-root": "./web"
             },
-            "file-mapping": {
-                "[project-root]/.editorconfig": false
-            }
         }
     },
     "config": {
-        "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
