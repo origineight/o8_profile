@@ -1,0 +1,82 @@
+name: O8 profile
+type: profile
+description: 'O8 install profile.'
+core_version_requirement: '^8.8 || ^9'
+
+distribution:
+  name: O8 profile
+  langcode: en
+
+# Modules to install to support the profile.
+install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter
+  - automated_cron
+  - big_pipe
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - content_moderation
+  - contextual
+  - crop
+  - ctools
+  - datetime
+  - datetime_range
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_group
+  - field_ui
+  - file
+  - filter
+  - focal_point
+  - help
+  - history
+  - image
+  - imageapi_optimize
+  - imageapi_optimize_resmushit
+  - link
+  - linkit
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  # - multiline_config
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - pathauto
+  - quickedit
+  - redirect
+  - redirect_404
+  - responsive_image
+  - search
+  - smart_trim
+  - spamspan
+  - svg_image
+  - svg_image_responsive
+  - taxonomy
+  - taxonomy_access_fix
+  - telephone
+  - text
+  - token
+  - toolbar
+  - twig_field_value
+  - twig_tweak
+  - update
+  - user
+  - views
+  - views_ui
+  - workflows
+
+# List any themes that should be installed as part of the profile installation.
+# Note that this will not set any theme as the default theme.
+themes:
+  - bartik
+  - seven
