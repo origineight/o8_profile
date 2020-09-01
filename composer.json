@@ -3,6 +3,8 @@
     "description": "O8 install profile.",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "composer",
@@ -14,13 +16,9 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/admin_toolbar": "^2.3",
         "drupal/components": "^2.0",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
         "drupal/ctools": "^3.4",
         "drupal/field_group": "^3.1",
         "drupal/focal_point": "^1.4",
@@ -38,40 +36,9 @@
         "drupal/twig_tweak": "^2.6",
         "drupal/webform": "^6",
         "drush/drush": "^9.7.1 | ^10.2",
-        "oomphinc/composer-installers-extender": "^2.0.0",
-        "pantheon-systems/drupal-integrations": "^8",
-        "pantheon-systems/quicksilver-pushback": "^2",
-        "rvtraveller/qs-composer-installer": "^1.1",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "zaporylie/composer-drupal-optimizations": "^1.1"
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "require-dev": {
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
-    "scripts": {
-        "build-assets": [
-            "@prepare-for-pantheon",
-            "composer install --optimize-autoloader --no-dev"
-        ],
-        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
     },
     "extra": {
         "merge-plugin": {
@@ -82,44 +49,6 @@
         "installer-types": [
             "npm-asset",
             "bower-asset"
-        ],
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:npm-asset",
-                "type:bower-asset"
-            ],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-        },
-        "build-env": {
-            "install-cms": [
-                "drush site-install standard --account-mail={account-mail} --account-name={account-name} --account-pass={account-pass} --site-mail={site-mail} --site-name={site-name} --yes"
-            ],
-            "export-configuration": "drush config-export --yes"
-        },
-        "drupal-scaffold": {
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
-            "locations": {
-                "web-root": "./web"
-            },
-            "file-mapping": {
-                "[project-root]/.editorconfig": false
-            }
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "7.3"
-        }
+        ]
     }
 }
