@@ -17,9 +17,9 @@
     ],
     "require": {
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/admin_toolbar": "^3.0.2",
+        "drupal/admin_toolbar": "^3.1",
         "drupal/components": "^2.2",
-        "drupal/ctools": "^3.4",
+        "drupal/ctools": "^4.0",
         "drupal/field_group": "^3.1",
         "drupal/focal_point": "^1.5",
         "drupal/imageapi_optimize": "^4.0",
@@ -33,12 +33,10 @@
         "drupal/taxonomy_access_fix": "^3.1",
         "drupal/token": "^1.9",
         "drupal/twig_field_value": "^2.0",
-        "drupal/twig_tweak": "^3.1",
+        "drupal/twig_tweak": "^3.2",
         "drupal/webform": "^6.0",
         "drush/drush": "^9.7.1 | ^10.4",
         "wikimedia/composer-merge-plugin": "^2.0"
-    },
-    "require-dev": {
     },
     "extra": {
         "merge-plugin": {
