@@ -32,7 +32,7 @@
         "drupal/svg_image": "^1.14",
         "drupal/taxonomy_access_fix": "^3.1",
         "drupal/token": "^1.9",
-        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_field_value": "^2.0.1",
         "drupal/twig_tweak": "^3.2",
         "drupal/webform": "^6.0",
         "drush/drush": "^9.7.1 | ^10.4",
